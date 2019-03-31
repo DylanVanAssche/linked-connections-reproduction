@@ -1,0 +1,12 @@
+{
+  "name": "linked-connections-reproduction",
+  "version": "1.0.0",
+  "description": "Feed the Linked Connections server reproducible data",
+  "main": "index.js",
+  "repository": "https://github.com/DylanVanAssche/linked-connections-reproduction",
+  "author": "Dylan Van Assche",
+  "license": "MIT",
+  "dependencies": {
+    "cron": "^1.7.0"
+  }
+}
