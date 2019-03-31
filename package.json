@@ -2,11 +2,15 @@
   "name": "linked-connections-reproduction",
   "version": "1.0.0",
   "description": "Feed the Linked Connections server reproducible data",
-  "main": "index.js",
+  "main": "./bin/index.js",
   "repository": "https://github.com/DylanVanAssche/linked-connections-reproduction",
   "author": "Dylan Van Assche",
   "license": "MIT",
+  "scripts": {
+    "start": "node ./bin/index.js"
+  },
   "dependencies": {
-    "cron": "^1.7.0"
+    "cron": "^1.7.0",
+    "express": "^4.16.4"
   }
 }

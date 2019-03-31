@@ -4,7 +4,7 @@ const fs = require('fs');
 const cron = require('cron');
 
 let app = express();
-let rt_files = fs.readdirSync(path.join(__dirname, './data/realtime'));
+let rt_files = fs.readdirSync(path.join(__dirname, '../data/realtime'));
 rt_files.sort(); // Files are named by fetch time
 let rt_counter = 0;
 let rt_job = new cron.CronJob({
@@ -20,12 +20,12 @@ let rt_job = new cron.CronJob({
 rt_job.start();
 
 app.get('/static', function (req, res) {
-    res.sendFile(path.join(__dirname, './data/static/static.zip'));
+    res.sendFile(path.join(__dirname, '../data/static/static.zip'));
     console.log('Static file send');
 });
 
 app.get('/realtime', function (req, res) {
-    let file_name = path.join('./data/realtime', rt_files[rt_counter]);
+    let file_name = path.join('../data/realtime', rt_files[rt_counter]);
     res.sendFile(path.join(__dirname, file_name));
     console.log('RT file: ' + file_name + ' send, counter: ' + rt_counter);
 });
