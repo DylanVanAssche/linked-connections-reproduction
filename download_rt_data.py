@@ -17,7 +17,7 @@ def download_file(url):
 
 while True:
     try:
-        download_file("https://sncb-opendata.hafas.de/gtfs/realtime/c21ac6758dd25af84cca5b707f3cb3de")
+        download_file("ENTER DOWNLOAD URI HERE")
         time.sleep(30)
     except Exception as error:
         print(error)
