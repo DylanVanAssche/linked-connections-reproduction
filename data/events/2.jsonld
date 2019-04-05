@@ -107,7 +107,7 @@
       }
     },
     {
-      "@id": "http://irail.be/connections/S11783/20190331/8811189#2019-03-31T11:46:02.088Z",
+      "@id": "http://irail.be/connections/S53363/20190331/8811189#2019-03-31T11:46:02.088Z",
       "@type": "Event",
       "hydra:view": "http://lc.dylanvanassche.be/sncb/connections?departureTime=2019-03-31T12:38:00.000Z",
       "sosa:resultTime": "2019-04-05T11:46:02.088Z",
@@ -118,13 +118,13 @@
           "@type": "Connection",
           "departureStop": "http://irail.be/stations/NMBS/008811189",
           "arrivalStop": "http://irail.be/stations/NMBS/008822269",
-          "departureTime": "2019-03-31T13:43:00.000Z",
-          "arrivalTime": "2019-03-31T13:53:00.000Z",
+          "departureTime": "2019-03-31T14:43:00.000Z",
+          "arrivalTime": "2019-03-31T14:53:00.000Z",
           "departureDelay": 600,
           "arrivalDelay": 600,
           "direction": "Anvers-Central",
-          "gtfs:trip": "http://irail.be/vehicle/S11763/20190331",
-          "gtfs:route": "http://irail.be/routes/S11763",
+          "gtfs:trip": "http://irail.be/vehicle/S53363/20190331",
+          "gtfs:route": "http://irail.be/routes/S53363",
           "gtfs:pickupType": "gtfs:Regular",
           "gtfs:dropOffType": "gtfs:Regular"
         }

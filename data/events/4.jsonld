@@ -114,12 +114,12 @@
       "sosa:hasResult": {
         "@type": "sosa:hasResult",
         "Connection": {
-          "@id": "http://irail.be/connections/S53363/20190331/8811189",
+          "@id": "http://irail.be/connections/S11783/20190331/8811189",
           "@type": "Connection",
           "departureStop": "http://irail.be/stations/NMBS/008811189",
           "arrivalStop": "http://irail.be/stations/NMBS/008822269",
-          "departureTime": "2019-03-31T13:42:00.000Z",
-          "arrivalTime": "2019-03-31T13:52:00.000Z",
+          "departureTime": "2019-03-31T14:42:00.000Z",
+          "arrivalTime": "2019-03-31T14:52:00.000Z",
           "departureDelay": 540,
           "arrivalDelay": 540,
           "direction": "Anvers-Central",
