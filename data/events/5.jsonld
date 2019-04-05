@@ -1,0 +1,135 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "lc": "http://semweb.mmlab.be/ns/linkedconnections#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "gtfs": "http://vocab.gtfs.org/terms#",
+    "sosa": "http://www.w3.org/ns/sosa#",
+    "Event": "sosa:Observation",
+    "Connection": "lc:Connection",
+    "CancelledConnection": "lc:CancelledConnection",
+    "arrivalTime": {
+      "@id": "lc:arrivalTime",
+      "@type": "xsd:dateTime"
+    },
+    "departureTime": {
+      "@id": "lc:departureTime",
+      "@type": "xsd:dateTime"
+    },
+    "arrivalStop": {
+      "@type": "@id",
+      "@id": "lc:arrivalStop"
+    },
+    "departureStop": {
+      "@type": "@id",
+      "@id": "lc:departureStop"
+    },
+    "departureDelay": {
+      "@id": "lc:departureDelay",
+      "@type": "xsd:integer"
+    },
+    "arrivalDelay": {
+      "@id": "lc:arrivalDelay",
+      "@type": "xsd:integer"
+    },
+    "direction": {
+      "@id": "gtfs:headsign",
+      "@type": "xsd:string"
+    },
+    "gtfs:trip": {
+      "@type": "@id"
+    },
+    "gtfs:route": {
+      "@type": "@id"
+    },
+    "gtfs:pickupType": {
+      "@type": "@id"
+    },
+    "gtfs:dropOffType": {
+      "@type": "@id"
+    },
+    "gtfs:Regular": {
+      "@type": "@id"
+    },
+    "gtfs:NotAvailable": {
+      "@type": "@id"
+    }
+  },
+  "@id": "http://lc.dylanvanassche.be/sncb/events",
+  "@type": "hydra:PartialCollectionView",
+  "@graph": [
+    {
+      "@id": "http://irail.be/connections/IC3134/20190331/8811189#2019-03-31T11:46:01.088Z",
+      "@type": "Event",
+      "hydra:view": "http://lc.dylanvanassche.be/sncb/connections?departureTime=2019-03-31T13:45:00.000Z",
+      "sosa:resultTime": "2019-04-05T11:46:01.088Z",
+      "sosa:hasResult": {
+        "@type": "sosa:hasResult",
+        "Connection": {
+          "@id": "http://irail.be/connections/IC3134/20190331/8811189",
+          "@type": "Connection",
+          "departureStop": "http://irail.be/stations/NMBS/008811189",
+          "arrivalStop": "http://irail.be/stations/NMBS/008812005",
+          "departureTime": "2019-03-31T13:47:00.000Z",
+          "arrivalTime": "2019-03-31T13:58:00.000Z",
+          "departureDelay": 240,
+          "arrivalDelay": 240,
+          "direction": "Charleroi-Sud",
+          "gtfs:trip": "http://irail.be/vehicle/IC3134/20190331",
+          "gtfs:route": "http://irail.be/routes/IC3134",
+          "gtfs:pickupType": "gtfs:Regular",
+          "gtfs:dropOffType": "gtfs:Regular"
+        }
+      }
+    },
+    {
+      "@id": "http://irail.be/connections/S11783/20190331/8811189#2019-03-31T11:46:02.088Z",
+      "@type": "Event",
+      "hydra:view": "http://lc.dylanvanassche.be/sncb/connections?departureTime=2019-03-31T12:38:00.000Z",
+      "sosa:resultTime": "2019-04-05T11:46:02.088Z",
+      "sosa:hasResult": {
+        "@type": "sosa:hasResult",
+        "Connection": {
+          "@id": "http://irail.be/connections/S53363/20190331/8811189",
+          "@type": "Connection",
+          "departureStop": "http://irail.be/stations/NMBS/008811189",
+          "arrivalStop": "http://irail.be/stations/NMBS/008822269",
+          "departureTime": "2019-03-31T14:43:00.000Z",
+          "arrivalTime": "2019-03-31T14:49:00.000Z",
+          "departureDelay": 180,
+          "arrivalDelay": 300,
+          "direction": "Brussels-Midi",
+          "gtfs:trip": "http://irail.be/vehicle/S53363/20190331",
+          "gtfs:route": "http://irail.be/routes/S53363",
+          "gtfs:pickupType": "gtfs:Regular",
+          "gtfs:dropOffType": "gtfs:Regular"
+        }
+      }
+    },
+    {
+      "@id": "http://irail.be/connections/S11783/20190331/8811189#2019-03-31T11:46:02.088Z",
+      "@type": "Event",
+      "hydra:view": "http://lc.dylanvanassche.be/sncb/connections?departureTime=2019-03-31T12:38:00.000Z",
+      "sosa:resultTime": "2019-04-05T11:46:02.088Z",
+      "sosa:hasResult": {
+        "@type": "sosa:hasResult",
+        "Connection": {
+          "@id": "http://irail.be/connections/S53363/20190331/8811189",
+          "@type": "Connection",
+          "departureStop": "http://irail.be/stations/NMBS/008811189",
+          "arrivalStop": "http://irail.be/stations/NMBS/008822269",
+          "departureTime": "2019-03-31T13:44:00.000Z",
+          "arrivalTime": "2019-03-31T13:53:00.000Z",
+          "departureDelay": 660,
+          "arrivalDelay": 600,
+          "direction": "Anvers-Central",
+          "gtfs:trip": "http://irail.be/vehicle/S11763/20190331",
+          "gtfs:route": "http://irail.be/routes/S11763",
+          "gtfs:pickupType": "gtfs:Regular",
+          "gtfs:dropOffType": "gtfs:Regular"
+        }
+      }
+    }
+  ]
+}
+

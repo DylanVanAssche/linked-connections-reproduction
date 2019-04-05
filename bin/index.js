@@ -7,6 +7,9 @@ let app = express();
 let rt_files = fs.readdirSync(path.join(__dirname, '../data/realtime'));
 rt_files.sort(); // Files are named by fetch time
 let rt_counter = 0;
+let events_files = fs.readdirSync(path.join(__dirname, '../data/events'));
+events_counter_files.sort(); // Files are named by fetch time
+let events_counter = 0;
 let rt_job = new cron.CronJob({
     cronTime: '*/30 * * * * *',
     onTick: () => {
@@ -18,6 +21,17 @@ let rt_job = new cron.CronJob({
     }
 });
 rt_job.start();
+let events_job = new cron.CronJob({
+    cronTime: '*/30 * * * * *',
+    onTick: () => {
+        events_counter++;
+        if(events_counter >= events_files.length) {
+            events_counter = 0;
+        }
+        console.log('Events counter set to: ' + events_counter);
+    }
+});
+events_job.start();
 
 app.get('/static', function (req, res) {
     res.sendFile(path.join(__dirname, '../data/static/static.zip'));
@@ -28,6 +42,12 @@ app.get('/realtime', function (req, res) {
     let file_name = path.join('../data/realtime', rt_files[rt_counter]);
     res.sendFile(path.join(__dirname, file_name));
     console.log('RT file: ' + file_name + ' send, counter: ' + rt_counter);
+});
+
+app.get('/events', function (req, res) {
+    let file_name = path.join('../data/events', events_files[events_counter]);
+    res.sendFile(path.join(__dirname, file_name));
+    console.log('Events file:' + file_name + ' send, counter: ' + events_counter);
 });
 
 let server = app.listen(3001, function () {
