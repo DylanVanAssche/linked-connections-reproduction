@@ -8,7 +8,7 @@ let rt_files = fs.readdirSync(path.join(__dirname, '../data/realtime'));
 rt_files.sort(); // Files are named by fetch time
 let rt_counter = 0;
 let events_files = fs.readdirSync(path.join(__dirname, '../data/events'));
-events_counter_files.sort(); // Files are named by fetch time
+events_files.sort(); // Files are named by fetch time
 let events_counter = 0;
 let rt_job = new cron.CronJob({
     cronTime: '*/30 * * * * *',
