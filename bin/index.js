@@ -33,8 +33,8 @@ let events_job = new cron.CronJob({
         if(clients.length > 0) {
             let file_name = path.join('../data/events', events_files[events_counter]);
             file_name = path.join(__dirname, file_name);
-            let file = fs.readFileSync(file_name, 'utf8');
-            clients[0].sse.broadcast.event('message', JSON.stringify(JSON.parse(file)), rt_counter);
+            let file = JSON.parse(fs.readFileSync(file_name, 'utf8'));
+            clients[0].sse.broadcast.event('message', file, rt_counter);
         }
     }
 });
