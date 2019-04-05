@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const cron = require('cron');
+const { Hub, sseHub } = require('@toverux/expresse');
 
 let app = express();
 let rt_files = fs.readdirSync(path.join(__dirname, '../data/realtime'));
@@ -29,9 +30,16 @@ let events_job = new cron.CronJob({
             events_counter = 0;
         }
         console.log('Events counter set to: ' + events_counter);
+        if(clients.length > 0) {
+            let file_name = path.join('../data/events', events_files[events_counter]);
+            file_name = path.join(__dirname, file_name);
+            let file = fs.readFileSync(file_name, 'utf8');
+            clients[0].sse.broadcast.event('message', JSON.stringify(JSON.parse(file)), rt_counter);
+        }
     }
 });
 events_job.start();
+let clients = [];
 
 app.get('/static', function (req, res) {
     res.sendFile(path.join(__dirname, '../data/static/static.zip'));
@@ -48,6 +56,13 @@ app.get('/events', function (req, res) {
     let file_name = path.join('../data/events', events_files[events_counter]);
     res.sendFile(path.join(__dirname, file_name));
     console.log('Events file:' + file_name + ' send, counter: ' + events_counter);
+});
+
+app.get('/events/sse', sseHub({ flushAfterWrite: true }), function(req, res) {
+    clients.push(res);
+    res.on('close', () => {
+       clients.splice(clients.indexOf(res), 1);
+    });
 });
 
 let server = app.listen(3001, function () {
