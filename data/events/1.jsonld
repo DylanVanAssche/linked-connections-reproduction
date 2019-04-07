@@ -83,24 +83,24 @@
       }
     },
     {
-      "@id": "http://irail.be/connections/S11783/20190331/8811189#2019-03-31T11:45:32.088Z",
+      "@id": "http://irail.be/connections/S11782/20190331/8811189#2019-03-31T11:45:32.088Z",
       "@type": "Event",
       "hydra:view": "http://lc.dylanvanassche.be/sncb/connections?departureTime=2019-03-31T12:38:00.000Z",
       "sosa:resultTime": "2019-04-05T11:45:32.088Z",
       "sosa:hasResult": {
         "@type": "sosa:hasResult",
         "Connection": {
-          "@id": "http://irail.be/connections/S11783/20190331/8811189",
+          "@id": "http://irail.be/connections/S11782/20190331/8811189",
           "@type": "Connection",
           "departureStop": "http://irail.be/stations/NMBS/008811189",
           "arrivalStop": "http://irail.be/stations/NMBS/008811148",
           "departureTime": "2019-03-31T12:38:00.000Z",
-          "arrivalTime": "2019-03-31T12:42:00.000Z",
+          "arrivalTime": "2019-03-31T12:41:00.000Z",
           "departureDelay": 300,
           "arrivalDelay": 300,
           "direction": "Brussels-Midi",
-          "gtfs:trip": "http://irail.be/vehicle/S11783/20190331",
-          "gtfs:route": "http://irail.be/routes/S11783",
+          "gtfs:trip": "http://irail.be/vehicle/S11782/20190331",
+          "gtfs:route": "http://irail.be/routes/S11782",
           "gtfs:pickupType": "gtfs:Regular",
           "gtfs:dropOffType": "gtfs:Regular"
         }
