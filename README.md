@@ -22,5 +22,6 @@ The file server can also serve the Linked Connections real time resource events 
 Make sure that you have NodeJS 11.X or later installed, together with the latest Yarn package manager.
 
 In the root directory of this repository run the following commands:
+
 1. `yarn install`
 2. `yarn start`
